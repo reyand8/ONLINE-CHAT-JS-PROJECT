@@ -13,7 +13,7 @@ const addUser = (user) => {
     const isExist = findUser(user)
     !isExist && users.push(user)
     const currentUser = isExist || user
-    return { isExist: !!isExist, user: currentUser}
+    return { isExist: !!isExist, user: currentUser }
 }
 
 const getRoomUsers = (room) => users.filter((u) => u.room === room)

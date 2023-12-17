@@ -33,7 +33,7 @@ io.on("connection", (socket) => {
         })
 
         socket.broadcast.to(user.room).emit("message", {
-            data: { user: { name: "Admin"}, message: `${user.name} has joined`}
+            data: { user: { name: "Admin"}, message: `${user.name} has joined` }
         })
         io.to(user.room).emit("room", {
             data: { users: getRoomUsers(user.room) },
