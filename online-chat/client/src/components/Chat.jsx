@@ -12,7 +12,7 @@ const socket = io.connect("http://localhost:5003")
 const Chat = () => {
     const navigate = useNavigate()
     const { search } = useLocation()
-    const [params, setParams] = useState({room: "", user: ""})
+    const [params, setParams] = useState({user: "", room: ""})
     const [state, setState] = useState([])
     const [message, setMessage] = useState("")
     const [isOpen, setOpen] = useState(false)
@@ -36,7 +36,7 @@ const Chat = () => {
         })
     }, [])
 
-    const leftRoom = () => {
+    const leftRoomClick = () => {
         socket.emit("leftRoom", { params })
         navigate("/")
     }
@@ -61,7 +61,7 @@ const Chat = () => {
                 <div className={styles.users}>
                     {users} users in this room
                 </div>
-                <button className={styles.left} onClick={leftRoom}>
+                <button className={styles.left} onClick={leftRoomClick}>
                     Left the room
                 </button>
             </div>
