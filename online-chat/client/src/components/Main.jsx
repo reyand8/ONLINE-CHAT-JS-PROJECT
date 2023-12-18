@@ -1,6 +1,6 @@
 import React, {useState} from "react"
 import styles from "../styles/Main.module.css"
-import {Link} from "react-router-dom";
+import {Link} from "react-router-dom"
 
 const FIELDS = {
     NAME: "name",
@@ -16,7 +16,7 @@ const Main = () => {
     }
 
     const handleBtnClick = (e) => {
-        const isDisabled = Object.values(values).some(value => !value)
+        const isDisabled = Object.values(values).some((value) => !value)
         if (isDisabled) {
             e.preventDefault()
         }
@@ -53,8 +53,11 @@ const Main = () => {
                             required
                         />
                     </div>
-                    <Link to={`/chat?name=${values[NAME]}&room=${values[ROOM]}`} className={styles.group}>
-                        <button type="submit" className={styles.button} onChange={handleBtnClick}>
+                    <Link
+                        to={`/chat?name=${values[NAME]}&room=${values[ROOM]}`}
+                        onClick={handleBtnClick}
+                        className={styles.group}>
+                        <button type="submit" id="submit-btn" className={styles.button} >
                             Sign In
                         </button>
                     </Link>
