@@ -2,9 +2,9 @@ import React from 'react';
 import io from 'socket.io-client';
 import {useEffect, useState} from 'react';
 import {useLocation, useNavigate} from 'react-router-dom';
+import EmojiPicker from 'emoji-picker-react';
 import styles from '../styles/Chat.module.css';
 import icon from '../images/emoji.svg';
-import EmojiPicker from 'emoji-picker-react';
 import Messages from './Messages';
 
 const socket = io.connect('http://localhost:5003');

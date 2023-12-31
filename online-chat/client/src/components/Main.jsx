@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import styles from '../styles/Main.module.css';
 import {Link} from 'react-router-dom';
+import styles from '../styles/Main.module.css';
 
 const FIELDS = {
     NAME: 'name',
