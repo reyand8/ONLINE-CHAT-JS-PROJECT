@@ -67,10 +67,6 @@ module.exports = {
     },
     resolve: {
         extensions: ['.js', '.jsx', '.svg'],
-        alias: {
-            '@icons': path.resolve(__dirname, 'public/icons'),
-            '@jsxComponents': path.resolve(__dirname, 'src/components')
-        }
     },
     optimization: optimization(),
     plugins: plugins(),
