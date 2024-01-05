@@ -2,9 +2,9 @@
 
 
 ## Contents
-* [Main information](#📜-Main-Information)
+* [Main Information](#📜-Main-Information)
 * [Stack](#Stack)
-* [Installation and usage](#Installation-and-Usage)
+* [Installation and Usage](#Installation-and-Usage)
 * [Examples](#Examples)
 
 ____
