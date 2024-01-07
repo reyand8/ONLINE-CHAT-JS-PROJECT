@@ -59,12 +59,12 @@ ____
 ____
 * Client
   - Navigate to the server directory: cd client
-  - Run the project: npm run start
-  - Open a browser and navigate to: http://localhost:3000
+  - Install dependencies: npm install
+    - Run the project: npm run start
+    - Open a browser and navigate to: http://localhost:3000
   - or
-  - Navigate to the server directory: cd client
-  - Run the project using webpack: npm run webpack-start
-  - Open a browser and navigate to: http://localhost:8080
+    - Run the project using webpack: npm run webpack-start
+    - Open a browser and navigate to: http://localhost:8080
 
 ____
 
