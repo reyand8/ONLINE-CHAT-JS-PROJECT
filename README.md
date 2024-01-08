@@ -19,7 +19,7 @@ With the correct data introduced by you, you will be redirected to the room indi
 2. **Chat page.** On this page, you will see your chat room. The first message 
 will be the greetings of Admin. Other users will receive a notification about a
 new connection. You can start chatting with other people if somebody else 
-is connected. The number of users in the room can be seen on the top of
+is connected. The number of users in the room can be seen at the top of
 the chat.
 
 ____
@@ -42,7 +42,7 @@ ____
 
 ## Installation and Usage
 
-The project consists of the two parts (server and client)
+The project consists of the two parts (server and client).
 
 **Installation:**
 
