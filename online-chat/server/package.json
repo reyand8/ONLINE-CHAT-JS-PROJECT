@@ -9,12 +9,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
-    "eslint": "^8.56.0"
+    "eslint": "^8.56.0",
+    "jest": "^29.7.0",
+    "jsdoc": "^4.0.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon index.js",
     "start": "node index.js",
+    "jest": "node --experimental-vm-modules node_modules/.bin/jest",
     "lint": "eslint -c .eslintrc --ext .js .",
     "lint:fix": "npm run lint -- --fix"
   },

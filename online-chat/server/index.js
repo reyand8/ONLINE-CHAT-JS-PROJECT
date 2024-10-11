@@ -19,7 +19,18 @@ const io = new Server(server, {
     },
 });
 
+/**
+ * Handles socket connection events.
+ * @param {Socket} socket - The socket connection object.
+ */
 io.on('connection', (socket) => {
+
+    /**
+     * Handles User joining a room.
+     * @param {Object} data - The data containing name and room.
+     * @param {string} data.name - The name of the user.
+     * @param {string} data.room - The room to join.
+     */
     socket.on('join', ({name, room}) => {
         socket.join(room);
 
@@ -39,6 +50,13 @@ io.on('connection', (socket) => {
             data: { users: getRoomUsers(user.room) },
         });
     });
+
+    /**
+     * Handles sending messages to a room.
+     * @param {Object} data - The data containing message and parameters.
+     * @param {string} data.message - The message to send.
+     * @param {Object} data.params - The user parameters to find the user.
+     */
     socket.on('sendMessage', ({ message, params }) => {
         const user = findUser(params);
         if (user) {
@@ -47,6 +65,10 @@ io.on('connection', (socket) => {
 
     });
 
+    /**
+     * Handles user leaving a room.
+     * @param {Object} params - The user parameters to identify the user.
+     */
     socket.on('leftRoom', ({ params }) => {
         const user = removeUser(params);
         if (user) {

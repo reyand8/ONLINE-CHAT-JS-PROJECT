@@ -28,4 +28,10 @@ const removeUser = (user) => {
     return correctUser;
 };
 
-module.exports = { addUser, findUser, getRoomUsers, removeUser };
+const getUsers = () => users;
+
+const resetUsers = () => {
+    users = [];
+};
+
+module.exports = { addUser, findUser, getRoomUsers, removeUser, getUsers, resetUsers };
